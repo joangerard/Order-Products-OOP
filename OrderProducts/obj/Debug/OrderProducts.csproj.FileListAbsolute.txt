@@ -1,0 +1,6 @@
+c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\bin\Debug\OrderProducts.exe.config
+c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\bin\Debug\OrderProducts.exe
+c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\bin\Debug\OrderProducts.pdb
+c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\obj\Debug\OrderProducts.exe
+c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\obj\Debug\OrderProducts.pdb
+c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\obj\Debug\OrderProducts.csprojResolveAssemblyReference.cache

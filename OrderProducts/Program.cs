@@ -13,11 +13,16 @@ namespace OrderProducts
             Product p1 = new Product("A122", "bread", 4);
             Product p2 = new Product("C123", "pencil", 3);
             Product p3 = new Product("D121", "bread", 4);
+            Product p4 = new Product("C123", "pencil", 1);
+
+
 
             ProductList products = new ProductList();
             products.Add(p1);
             products.Add(p2);
             products.Add(p3);
+            products.Add(p4);
+
 
             while (true)
             {
@@ -34,7 +39,8 @@ namespace OrderProducts
                 List<IOrderManager> orders = translator.Translate(options);
                 Console.WriteLine();
                 Console.WriteLine("RESULT: ");
-                products.Order(orders[0], orders[1], orders[2]);
+
+                products.Order(orders);
                 products.Show();
 
             }

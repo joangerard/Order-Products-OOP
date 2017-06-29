@@ -20,9 +20,9 @@ namespace OrderProducts
             products.Add(p);
         }
 
-        public void Order(IOrderManager orderValue1, IOrderManager orderValue2, IOrderManager orderValue3) 
+        public void Order(List<IOrderManager> orders)
         {
-            OrderByBubble(orderValue1,orderValue2,orderValue3);
+            OrderByBubble(orders);
         }
 
         public void Show() 
@@ -30,14 +30,13 @@ namespace OrderProducts
             products.ForEach(p=>p.Show());
         }
 
-        //TODO: Refactor, break first principle of SOLID
-        private void OrderByBubble(IOrderManager orderValue1, IOrderManager orderValue2, IOrderManager orderValue3)
+        private void OrderByBubble(List<IOrderManager> orders)
         {
             Product t;
             for (int a = 1; a < products.Count(); a++)
                 for (int b = products.Count() - 1; b >= a; b--)
                 {
-                    if (Comparer(products[b - 1], products[b], orderValue1, orderValue2, orderValue3))
+                    if (Comparer(products[b - 1], products[b], orders,1))
                     {
                         t = products[b - 1];
                         products[b - 1] = products[b];
@@ -46,13 +45,25 @@ namespace OrderProducts
                 }
         }
 
-
-        //TODO: Refactor, break first principle of SOLID
-        private bool Comparer(Product product1, Product product2, IOrderManager orderValue1, IOrderManager orderValue2, IOrderManager orderValue3)
+        private bool Comparer(Product product1, Product product2, List<IOrderManager> orders,int level)
         {
-            return orderValue1.DifferentValues(product1, product2) ||
-                    (orderValue1.EqualValues(product1, product2) && orderValue2.DifferentValues(product1, product2)) ||
-                    (orderValue1.EqualValues(product1, product2) && orderValue2.EqualValues(product1, product2) && orderValue3.DifferentValues(product1, product2));
+            if (level == orders.Count())
+            {
+                return ComparerHelper(product1,product2,orders);
+            }
+            level++;
+            return Comparer(product1, product2, orders, level) || ComparerHelper(product1, product2, orders.GetRange(0,orders.Count()-1));
+            
+        }
+
+        private bool ComparerHelper(Product product1, Product product2, List<IOrderManager> list)
+        {
+            bool response = true;
+            for (int i = 0; i < list.Count()-1; i++)
+            {
+                response = list[i].EqualValues(product1, product2) && response;
+            }
+            return list[list.Count() - 1].DifferentValues(product1, product2) && response;
         }
     }
 }

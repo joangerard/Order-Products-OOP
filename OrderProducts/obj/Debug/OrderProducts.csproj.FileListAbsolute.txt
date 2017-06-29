@@ -4,3 +4,9 @@ c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProd
 c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\obj\Debug\OrderProducts.exe
 c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\obj\Debug\OrderProducts.pdb
 c:\users\sebastian\documents\visual studio 2013\Projects\OrderProducts\OrderProducts\obj\Debug\OrderProducts.csprojResolveAssemblyReference.cache
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\OrderProducts.exe.config
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\obj\Debug\OrderProducts.exe
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\obj\Debug\OrderProducts.pdb
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\OrderProducts.exe
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\OrderProducts.pdb
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\obj\Debug\OrderProducts.csprojResolveAssemblyReference.cache

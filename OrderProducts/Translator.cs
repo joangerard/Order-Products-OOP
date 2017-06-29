@@ -40,12 +40,6 @@ namespace OrderProducts
                 orders.Add(factoryOrder.Create());
             }
 
-            //for the other object properties
-            for (int i = properties.Count(); i < numberOfProperties;i++ )
-            {
-                orders.Add(new Default());
-            }
-
             return orders;
         }
 

@@ -41,26 +41,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ascending.cs" />
+    <Compile Include="BookContainer\Book.cs" />
+    <Compile Include="BookContainer\BookList.cs" />
+    <Compile Include="BookContainer\PropertyComparerClasses\BookAuthorPropertyComparer.cs" />
+    <Compile Include="BookContainer\PropertyComparerClasses\BookIsbnPropertyComparer.cs" />
+    <Compile Include="BookContainer\PropertyComparerClasses\BookNamePropertyComparer.cs" />
+    <Compile Include="BookContainer\PropertyComparerClasses\FactoryBookPropertyComparer.cs" />
+    <Compile Include="Shared\Box.cs" />
+    <Compile Include="Shared\BoxComponent.cs" />
+    <Compile Include="Shared\ObjectListFactory.cs" />
+    <Compile Include="Shared\OrderDeciderClasses\IObjectOrderDecider.cs" />
+    <Compile Include="Shared\ObjectListBase.cs" />
+    <Compile Include="Shared\OrderDeciderClasses\ObjectPropertyOrderAscending.cs" />
+    <Compile Include="ProductContainer\PropertyComparerClasses\ProductExpirationDateComparer.cs" />
+    <Compile Include="Shared\PropertyComparerClasses\IFactoryObjectPropertyComparer.cs" />
+    <Compile Include="Shower.cs" />
     <Compile Include="Translator.cs" />
-    <Compile Include="Code.cs" />
-    <Compile Include="DefaultOrder.cs" />
-    <Compile Include="FactoryOrder.cs" />
-    <Compile Include="FactoryType.cs" />
-    <Compile Include="None.cs" />
-    <Compile Include="Descending.cs" />
-    <Compile Include="IOrderManager.cs" />
-    <Compile Include="IPropertyManager.cs" />
-    <Compile Include="Name.cs" />
-    <Compile Include="Stock.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="ProductList.cs" />
+    <Compile Include="ProductContainer\PropertyComparerClasses\ProductCodeComparer.cs" />
+    <Compile Include="Shared\OrderDeciderClasses\ObjectPropertyOrderDefault.cs" />
+    <Compile Include="Shared\OrderDeciderClasses\FatoryObjectOrderDecider.cs" />
+    <Compile Include="ProductContainer\PropertyComparerClasses\FactoryProductPropertyComparer.cs" />
+    <Compile Include="Shared\PropertyComparerClasses\ObjectNotDefinedPropertyComparer.cs" />
+    <Compile Include="Shared\OrderDeciderClasses\ObjectPropertyOrderDescending.cs" />
+    <Compile Include="Shared\OrderDeciderClasses\ObjectOrderDeciderBase.cs" />
+    <Compile Include="Shared\PropertyComparerClasses\IObjectPropertyComparer.cs" />
+    <Compile Include="ProductContainer\PropertyComparerClasses\ProductNameComparer.cs" />
+    <Compile Include="ProductContainer\PropertyComparerClasses\ProductStockComparer.cs" />
+    <Compile Include="ProductContainer\Product.cs" />
+    <Compile Include="ProductContainer\ProductList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

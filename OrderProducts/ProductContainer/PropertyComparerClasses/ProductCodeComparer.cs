@@ -1,25 +1,27 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OrderProducts
+namespace Container
 {
-    class Stock:IPropertyManager
+    class ProductCodeComparer:IObjectPropertyComparer<Product>
     {
         public bool IsGreater(Product product1, Product product2)
         {
-            return product1.stock > product2.stock;
+            return String.Compare(product1.Code, product2.Code) > 0;
         }
 
         public bool Equal(Product product1, Product product2)
         {
-            return product1.stock == product2.stock;
+            return String.Equals(product1.Code, product2.Code);
         }
 
         public bool IsLower(Product product1, Product product2)
         {
-            return product1.stock < product2.stock;
+            return String.Compare(product1.Code, product2.Code) < 0;
         }
     }
 }

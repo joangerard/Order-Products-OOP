@@ -1,15 +1,17 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrderProducts
+namespace Container
 {
-    class FactoryType
+    class FactoryBookPropertyComparer:IFactoryObjectPropertyComparer<Book>
     {
         string option;
-        public FactoryType()
+
+        public FactoryBookPropertyComparer()
         {
             this.option = "1";
         }
@@ -19,19 +21,21 @@ namespace OrderProducts
             this.option = option;
         }
 
-        public IPropertyManager Create()
+        public IObjectPropertyComparer<Book> Create()
         {
             switch (option)
             {
                 case "1":
-                    return new Code();
+                    return new BookNamePropertyComparer();
                 case "2":
-                    return new Name();
+                    return new BookAuthorPropertyComparer();
                 case "3":
-                    return new Stock();
+                    return new BookIsbnPropertyComparer();
                 default:
-                    return new None();
+                    return new ObjectNotDefinedPropertyComparer<Book>();
             }
         }
+
+
     }
 }

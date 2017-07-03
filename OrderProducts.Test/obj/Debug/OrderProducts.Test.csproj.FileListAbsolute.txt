@@ -1,0 +1,1 @@
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\obj\Debug\OrderProducts.Test.csprojResolveAssemblyReference.cache

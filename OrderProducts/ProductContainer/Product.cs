@@ -13,14 +13,12 @@ namespace Container
         public string Name { get; set; }
         public int Stock { get; set; }
         public DateTime ExpirationDate { get; set; }
-        private IViewer _viewer;
-        public Product(string code,string name,int stock,DateTime expirationDate,IViewer viewer)
+        public Product(string code,string name,int stock,DateTime expirationDate)
         {
             this.Code = code;
             this.Name = name;
             this.Stock = stock;
             this.ExpirationDate = expirationDate;
-            this._viewer = viewer;
         }
     }
 }

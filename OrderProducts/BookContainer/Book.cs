@@ -12,13 +12,11 @@ namespace Container
         public string Name { get; set; }
         public string Author { get; set; }
         public string Isbn { get; set; }
-        private IViewer _viewer;
-        public Book(string name,string author,string isbn,IViewer viewer)
+        public Book(string name,string author,string isbn)
         {
             this.Name = name;
             this.Author = author;
             this.Isbn = isbn;
-            this._viewer = viewer;
         }
 
     }

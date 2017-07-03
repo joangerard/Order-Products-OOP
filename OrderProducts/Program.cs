@@ -18,14 +18,14 @@ namespace OrderProducts
             IViewer viewer = new ViewerConsole();
             string optionsParameters, optionsBooksOrProducts;
 
-            Product p1 = new Product("A122", "bread", 4, new DateTime(2017, 12, 12), viewer);
-            Product p2 = new Product("C123", "pencil", 3, new DateTime(2017, 12, 11), viewer);
-            Product p3 = new Product("D121", "bread", 4, new DateTime(2017, 12, 10), viewer);
-            Product p4 = new Product("C123", "pencil", 1, new DateTime(2017, 12, 14), viewer);
+            Product p1 = new Product("A122", "bread", 4, new DateTime(2017, 12, 12));
+            Product p2 = new Product("C123", "pencil", 3, new DateTime(2017, 12, 11));
+            Product p3 = new Product("D121", "bread", 4, new DateTime(2017, 12, 10));
+            Product p4 = new Product("C123", "pencil", 1, new DateTime(2017, 12, 14));
 
-            Book b1 = new Book("Harry Potter 1", "JK Rowlings", "123456f", viewer);
-            Book b2 = new Book("Harry Potter 2", "JK Rowlings", "123456j", viewer);
-            Book b3 = new Book("Harry Potter 3", "JK Rowlings", "123456j", viewer);
+            Book b1 = new Book("Harry Potter 1", "JK Rowlings", "123456f");
+            Book b2 = new Book("Harry Potter 2", "JK Rowlings", "123456j");
+            Book b3 = new Book("Harry Potter 3", "JK Rowlings", "123456j");
 
             ObjectListBase<Book> books = new BookList();
             ObjectListBase<Product> products = new ProductList();

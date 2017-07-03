@@ -13,17 +13,19 @@ namespace Container
         public string Name { get; set; }
         public int Stock { get; set; }
         public DateTime ExpirationDate { get; set; }
-        public Product(string code,string name,int stock,DateTime expirationDate)
+        private IViewer _viewer;
+        public Product(string code,string name,int stock,DateTime expirationDate,IViewer viewer)
         {
             this.Code = code;
             this.Name = name;
             this.Stock = stock;
             this.ExpirationDate = expirationDate;
+            this._viewer = viewer;
         }
 
-        public override void Print() 
+        public override void ShowInformation()
         {
-            Console.WriteLine("{0} {1} {2} {3}", this.Code, this.Name, this.Stock, this.ExpirationDate.ToString("yyyy/MM/dd"));
+            _viewer.Show(String.Format("{0} {1} {2} {3}", this.Code, this.Name, this.Stock, this.ExpirationDate.ToString("yyyy/MM/dd")));
         }
     }
 }

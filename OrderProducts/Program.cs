@@ -108,29 +108,30 @@ namespace OrderProducts
             //    Console.Clear();
             //}
 
+            IViewer viewer = new ViewerConsole();
 
-            BoxComponent pastaFerrari = new Product("1", "Pasta Ferrari", 200, new DateTime(2017, 10, 10));
-            BoxComponent pastaZucaritas = new Product("2", "Pasta Zucaritas", 200, new DateTime(2017, 10, 10));
-            BoxComponent pastaWhatEver = new Product("3", "Pasta WhatEver", 200, new DateTime(2017, 10, 10));
-            BoxComponent pastas = new Box("Pastas", "All the pastas");
+            BoxComponent pastaFerrari = new Product("1", "Pasta Ferrari", 200, new DateTime(2017, 10, 10), viewer);
+            BoxComponent pastaZucaritas = new Product("2", "Pasta Zucaritas", 200, new DateTime(2017, 10, 10), viewer);
+            BoxComponent pastaWhatEver = new Product("3", "Pasta WhatEver", 200, new DateTime(2017, 10, 10), viewer);
+            BoxComponent pastas = new Box("Pastas", "All the pastas", viewer);
             
             pastas.Add(pastaFerrari);
             pastas.Add(pastaZucaritas);
             pastas.Add(pastaWhatEver);
 
-            BoxComponent harryPotterBook1 = new Book("Harry Potter 1", "JK Rowlings", "123456");
-            BoxComponent harryPotterBook2 = new Book("Harry Potter 2", "JK Rowlings", "123456");
-            BoxComponent harryPotterBook3 = new Book("Harry Potter 3", "JK Rowlings", "123456");
-            BoxComponent books = new Box("Books", "All my books");
+            BoxComponent harryPotterBook1 = new Book("Harry Potter 1", "JK Rowlings", "123456", viewer);
+            BoxComponent harryPotterBook2 = new Book("Harry Potter 2", "JK Rowlings", "123456", viewer);
+            BoxComponent harryPotterBook3 = new Book("Harry Potter 3", "JK Rowlings", "123456", viewer);
+            BoxComponent books = new Box("Books", "All my books", viewer);
             books.Add(harryPotterBook1);
             books.Add(harryPotterBook1);
             books.Add(harryPotterBook1);
 
-            BoxComponent allThings = new Box("Things", "Books and Pastas");
+            BoxComponent allThings = new Box("Things", "Books and Pastas", viewer);
             allThings.Add(books);
             allThings.Add(pastas);
 
-            allThings.Print();
+            allThings.ShowInformation();
 
             Console.ReadKey();
         }

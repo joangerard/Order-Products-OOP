@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Container
+{
+    public class ViewerConsole:IViewer
+    {
+
+        public void Show(string text)
+        {
+            Console.WriteLine(text);
+        }
+    }
+}

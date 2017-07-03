@@ -26,7 +26,7 @@ namespace Container
             throw new InvalidOperationException();
         }
 
-        public virtual void Print()
+        public virtual void ShowInformation()
         {
             throw new InvalidOperationException();
         }

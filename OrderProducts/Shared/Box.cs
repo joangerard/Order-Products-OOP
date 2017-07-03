@@ -12,11 +12,14 @@ namespace Container
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public Box(string name, string description)
+        private IViewer Viewer;
+
+        public Box(string name, string description,IViewer viewer)
         {
             this.Name = name;
             this.Description = description;
             this.ContainerComponents = new List<BoxComponent>();
+            this.Viewer = viewer;
         }
 
         public override void Add(BoxComponent containerComponent)
@@ -34,15 +37,15 @@ namespace Container
             return ContainerComponents.ElementAt(i);
         }
 
-        public override void Print()
+        public override void ShowInformation()
         {
-            Console.WriteLine(this.Name);
-            Console.WriteLine(this.Description);
-            Console.WriteLine("---------------------------");
+            this.Viewer.Show(this.Name);
+            this.Viewer.Show(this.Description);
+            this.Viewer.Show("-----------------------------");
 
             foreach (var item in ContainerComponents)
             {
-                item.Print();
+                item.ShowInformation();
             }
             
         }

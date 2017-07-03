@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    class ObjectPropertyOrderDefault<TObject> : ObjectPropertyOrderDeciderBase<TObject>
+    class ObjectPropertyOrderDefault<T> : ObjectPropertyOrderDeciderBase<T>
     {
         public ObjectPropertyOrderDefault()
         {
-            this.type = new ObjectNotDefinedPropertyComparer<TObject>();
+            this.type = new ObjectNotDefinedPropertyComparer<T>();
         }
 
-        public override bool OrderDecided(TObject p1, TObject p2)
+        public override bool OrderDecided(T p1, T p2)
         {
             return this.type.IsGreater(p1,p2);
         }

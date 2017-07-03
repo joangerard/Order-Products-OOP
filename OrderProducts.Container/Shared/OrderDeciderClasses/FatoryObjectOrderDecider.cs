@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public class FatoryObjectPropertyOrderDecider<TObject>
+    public class FatoryObjectPropertyOrderDecider<T>
     {
         public FatoryObjectPropertyOrderDecider()
         {
         }
 
-        public IObjectOrderDecider<TObject> Create(string option,IObjectPropertyComparer<TObject> type)
+        public IObjectOrderDecider<T> Create(string option,IObjectPropertyComparer<T> type)
         {
             switch (option)
             {
                 case "A":
-                    return new ObjectPropertyOrderAscending<TObject>(type);
+                    return new ObjectPropertyOrderAscending<T>(type);
                 case "D":
-                    return new ObjectPropertyOrderDescending<TObject>(type);
+                    return new ObjectPropertyOrderDescending<T>(type);
                 default:
-                    return new ObjectPropertyOrderDefault<TObject>();
+                    return new ObjectPropertyOrderDefault<T>();
             }
         }
     }

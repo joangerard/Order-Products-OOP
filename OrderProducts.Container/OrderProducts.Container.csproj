@@ -55,7 +55,7 @@
     <Compile Include="MenuComponents\Menu.cs" />
     <Compile Include="MenuComponents\MenuComponent.cs" />
     <Compile Include="MenuComponents\MenuItem.cs" />
-    <Compile Include="Helpers\ListHelper.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Shared\OrderDeciderClasses\FatoryObjectOrderDecider.cs" />
     <Compile Include="Shared\OrderDeciderClasses\IObjectOrderDecider.cs" />
     <Compile Include="Shared\OrderDeciderClasses\ObjectOrderDeciderBase.cs" />

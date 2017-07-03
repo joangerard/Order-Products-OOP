@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    class ObjectNotDefinedPropertyComparer<TObject>:IObjectPropertyComparer<TObject>
+    class ObjectNotDefinedPropertyComparer<T>:IObjectPropertyComparer<T>
     {
-        public bool Equal(TObject p1, TObject p2)
+        public bool Equal(T p1, T p2)
         {
             return false;
         }
 
-        public bool IsGreater(TObject p1, TObject p2)
+        public bool IsGreater(T p1, T p2)
         {
             return true;
         }
 
-        public bool IsLower(TObject p1, TObject p2)
+        public bool IsLower(T p1, T p2)
         {
             return false;
         }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    abstract class ObjectPropertyOrderDeciderBase<TObject>:IObjectOrderDecider<TObject>
+    abstract class ObjectPropertyOrderDeciderBase<T>:IObjectOrderDecider<T>
     {
-        public IObjectPropertyComparer<TObject> type;
-        public abstract bool OrderDecided(TObject p1, TObject p2);
-        public bool EqualValues(TObject p1, TObject p2)
+        public IObjectPropertyComparer<T> type;
+        public abstract bool OrderDecided(T p1, T p2);
+        public bool EqualValues(T p1, T p2)
         {
             return type.Equal(p1, p2);
         }

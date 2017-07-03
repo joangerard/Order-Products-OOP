@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public static class ListHelper<TObject>
+    public static class ListExtensions
     {
-
-        public static void Order(List<TObject> list,List<IObjectOrderDecider<TObject>> orderDeciders)
+        public static List<T> Order<T>(this List<T> list, List<IObjectOrderDecider<T>> orderDeciders)
         {
-            OrderByBubble(list,orderDeciders);
+            OrderByBubble(list, orderDeciders);
+            return list;
         }
 
-        private static void OrderByBubble(List<TObject> list,List<IObjectOrderDecider<TObject>> orderDeciders)
+        private static void OrderByBubble<T>(List<T> list,List<IObjectOrderDecider<T>> orderDeciders)
         {
-            TObject t;
+            T t;
             for (int a = 1; a < list.Count(); a++)
                 for (int b = list.Count() - 1; b >= a; b--)
                 {
@@ -30,7 +30,7 @@ namespace Container
                 }
         }
 
-        private static bool Comparer(TObject o1, TObject o2, List<IObjectOrderDecider<TObject>> orderDeciders)
+        private static bool Comparer<T>(T o1, T o2, List<IObjectOrderDecider<T>> orderDeciders)
         {
             int i;
             bool response = false;
@@ -43,7 +43,7 @@ namespace Container
             return response;
         }
 
-        private static bool ComparerHelper(TObject o1, TObject o2, List<IObjectOrderDecider<TObject>> list)
+        private static bool ComparerHelper<T>(T o1, T o2, List<IObjectOrderDecider<T>> list)
         {
             bool response = true;
             for (int i = 0; i < list.Count() - 1; i++)

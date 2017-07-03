@@ -10,37 +10,37 @@ using System.Threading.Tasks;
 
 namespace OrderProducts
 {
-    public class Interpreter<TObject>
+    public class Interpreter<T>
     {
         string options;
-        IFactoryObjectPropertyComparer<TObject> factoryObjectPropertyComparer;
-        FatoryObjectPropertyOrderDecider<TObject> factoryOrderDeciders;
+        IFactoryObjectPropertyComparer<T> factoryObjectPropertyComparer;
+        FatoryObjectPropertyOrderDecider<T> factoryOrderDeciders;
         string[] properties;
         string[] orderings;
         char orderSeparator;
         char propertySeparator;
 
-        public Interpreter(IFactoryObjectPropertyComparer<TObject> factoryObjectPropertyComparer, string defaultOptions, char orderSeparator = '-', char propertySeparator = ',')
+        public Interpreter(IFactoryObjectPropertyComparer<T> factoryObjectPropertyComparer, string defaultOptions, char orderSeparator = '-', char propertySeparator = ',')
         {
             this.options = defaultOptions;
             this.factoryObjectPropertyComparer = factoryObjectPropertyComparer;
-            this.factoryOrderDeciders = new FatoryObjectPropertyOrderDecider<TObject>();
+            this.factoryOrderDeciders = new FatoryObjectPropertyOrderDecider<T>();
             this.orderSeparator = orderSeparator;
             this.propertySeparator = propertySeparator;
         }
 
-        public void SetFactoryObjectPropertyComparer(IFactoryObjectPropertyComparer<TObject> factoryObjectPropertyComparer)
+        public void SetFactoryObjectPropertyComparer(IFactoryObjectPropertyComparer<T> factoryObjectPropertyComparer)
         {
             this.factoryObjectPropertyComparer = factoryObjectPropertyComparer;
         }
 
-        public List<IObjectOrderDecider<TObject>> Translate(string options)
+        public List<IObjectOrderDecider<T>> Translate(string options)
         {
             this.options = options;
             Parse(options);
 
-            IObjectPropertyComparer<TObject> type;
-            List<IObjectOrderDecider<TObject>> orders = new List<IObjectOrderDecider<TObject>>();
+            IObjectPropertyComparer<T> type;
+            List<IObjectOrderDecider<T>> orders = new List<IObjectOrderDecider<T>>();
 
             for (int i = 0; i < properties.Count(); i++)
             {

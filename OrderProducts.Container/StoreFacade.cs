@@ -13,7 +13,7 @@ namespace OrderProducts.Container
         List<Product> products;
         List<Book> books;
         IFactoryObjectPropertyComparer<Book> factoryBookObjectComparer;
-        IFactoryObjectPropertyComparer<Product> factoryProductObjectComparer;
+        IFactoryObjectPropertyComparer<Product> factoryProducTComparer;
         Interpreter<Product> translatorProducts;
         Interpreter<Book> translatorBooks;
         string optionsBooksOrProducts;
@@ -25,9 +25,9 @@ namespace OrderProducts.Container
             this.products = new List<Product>();
             this.books = new List<Book>();
             this.factoryBookObjectComparer = new FactoryBookPropertyComparer();
-            this.factoryProductObjectComparer = new FactoryProductPropertyComparer();
+            this.factoryProducTComparer = new FactoryProductPropertyComparer();
             this.translatorBooks = new Interpreter<Book>(factoryBookObjectComparer, "2-A");
-            this.translatorProducts = new Interpreter<Product>(factoryProductObjectComparer, "1-A");
+            this.translatorProducts = new Interpreter<Product>(factoryProducTComparer, "1-A");
 
         }
 
@@ -109,12 +109,12 @@ namespace OrderProducts.Container
             if (optionsBooksOrProducts.Equals("1"))
             {
                 List<IObjectOrderDecider<Book>> orderDeciders = translatorBooks.Translate(optionsParameters);
-                ListHelper<Book>.Order(books, orderDeciders);
+                books.Order(orderDeciders);
             }
             else if (optionsBooksOrProducts.Equals("2"))
             {
                 List<IObjectOrderDecider<Product>> orderDeciders = translatorProducts.Translate(optionsParameters);
-                ListHelper<Product>.Order(products, orderDeciders);
+                products.Order(orderDeciders);
             }
         }
     }

@@ -44,11 +44,8 @@ namespace OrderProducts
 
             for (int i = 0; i < properties.Count(); i++)
             {
-                factoryObjectPropertyComparer.SetOption(properties[i]);
-                type= factoryObjectPropertyComparer.Create();
-                factoryOrderDeciders.SetOption(orderings[i]);
-                factoryOrderDeciders.SetType(type);
-                orders.Add(factoryOrderDeciders.Create());
+                type = factoryObjectPropertyComparer.Create(properties[i]);
+                orders.Add(factoryOrderDeciders.Create(orderings[i], type));
             }
 
             return orders;

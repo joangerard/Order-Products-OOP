@@ -9,18 +9,11 @@ namespace Container
 {
     public class FactoryProductPropertyComparer : IFactoryObjectPropertyComparer<Product>
     {
-        string option;
         public FactoryProductPropertyComparer()
         {
-            this.option = "1";
         }
 
-        public void SetOption(string option)
-        {
-            this.option = option;
-        }
-
-        public IObjectPropertyComparer<Product> Create()
+        public IObjectPropertyComparer<Product> Create(string option)
         {
             switch (option)
             {

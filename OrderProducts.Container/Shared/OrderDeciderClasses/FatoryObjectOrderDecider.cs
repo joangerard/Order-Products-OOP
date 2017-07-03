@@ -9,33 +9,18 @@ namespace Container
 {
     public class FatoryObjectPropertyOrderDecider<TObject>
     {
-        string option;
-        IObjectPropertyComparer<TObject> type;
-
         public FatoryObjectPropertyOrderDecider()
         {
-            this.option = "A";
-            this.type = new ObjectNotDefinedPropertyComparer<TObject>();
         }
 
-        public void SetOption(string option)
-        {
-            this.option = option;
-        }
-
-        public void SetType(IObjectPropertyComparer<TObject> type)
-        {
-            this.type = type;
-        }
-
-        public IObjectOrderDecider<TObject> Create()
+        public IObjectOrderDecider<TObject> Create(string option,IObjectPropertyComparer<TObject> type)
         {
             switch (option)
             {
                 case "A":
-                    return new ObjectPropertyOrderAscending<TObject>(this.type);
+                    return new ObjectPropertyOrderAscending<TObject>(type);
                 case "D":
-                    return new ObjectPropertyOrderDescending<TObject>(this.type);
+                    return new ObjectPropertyOrderDescending<TObject>(type);
                 default:
                     return new ObjectPropertyOrderDefault<TObject>();
             }

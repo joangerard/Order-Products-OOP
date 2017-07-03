@@ -8,7 +8,6 @@ namespace Container
 {
     public interface IFactoryObjectPropertyComparer<TObject>
     {
-        void SetOption(string option);
-        IObjectPropertyComparer<TObject> Create();
+        IObjectPropertyComparer<TObject> Create(string option);
     }
 }

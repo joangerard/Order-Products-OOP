@@ -16,8 +16,7 @@ namespace OrderProducts.Container.Test.BookContainer.PropertyComparerClasses
         public void CreateOneShouldReturnBookNamePropertyComparer()
         {
             FactoryBookPropertyComparer factory = new FactoryBookPropertyComparer();
-            factory.SetOption("1");
-            Assert.AreEqual(factory.Create().GetType(), typeof(BookNamePropertyComparer));
+            Assert.AreEqual(factory.Create("1").GetType(), typeof(BookNamePropertyComparer));
         }
     }
 }

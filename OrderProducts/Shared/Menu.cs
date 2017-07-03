@@ -37,14 +37,14 @@ namespace Container
             return ContainerComponents.ElementAt(i);
         }
 
-        public override void ShowInformation()
+        public override void Show()
         {
             this.Viewer.Show(this.Name + " " + this.Description);
             this.Viewer.Show("-----------------------------");
             
             foreach (var item in ContainerComponents)
             {
-                item.ShowInformation();
+                item.Show();
             }
             this.Viewer.Show("");
         }

@@ -19,7 +19,7 @@ namespace Container
             this._viewer = viewer;
         }
 
-        public override void ShowInformation()
+        public override void Show()
         {
             _viewer.Show(String.Format("{0} {1}", Option, Description));
         }

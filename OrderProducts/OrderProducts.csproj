@@ -58,7 +58,6 @@
     <Compile Include="ProductContainer\PropertyComparerClasses\ProductExpirationDateComparer.cs" />
     <Compile Include="Shared\PropertyComparerClasses\IFactoryObjectPropertyComparer.cs" />
     <Compile Include="Shared\Viewer.cs" />
-    <Compile Include="Shower.cs" />
     <Compile Include="Translator.cs" />
     <Compile Include="ProductContainer\PropertyComparerClasses\ProductCodeComparer.cs" />
     <Compile Include="Shared\OrderDeciderClasses\ObjectPropertyOrderDefault.cs" />

@@ -9,5 +9,7 @@ namespace Container
     public interface IViewer
     {
         void Show(string text);
+        void ShowProducts(List<Product> products);
+        void ShowBooks(List<Book> books);
     }
 }

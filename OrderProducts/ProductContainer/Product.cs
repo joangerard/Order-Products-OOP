@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public class Product:BoxComponent
+    public class Product
     {
         public string Code { get; set; }
         public string Name { get; set; }
@@ -21,11 +21,6 @@ namespace Container
             this.Stock = stock;
             this.ExpirationDate = expirationDate;
             this._viewer = viewer;
-        }
-
-        public override void ShowInformation()
-        {
-            _viewer.Show(String.Format("{0} {1} {2} {3}", this.Code, this.Name, this.Stock, this.ExpirationDate.ToString("yyyy/MM/dd")));
         }
     }
 }

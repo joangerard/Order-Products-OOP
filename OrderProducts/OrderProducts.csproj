@@ -47,9 +47,10 @@
     <Compile Include="BookContainer\PropertyComparerClasses\BookIsbnPropertyComparer.cs" />
     <Compile Include="BookContainer\PropertyComparerClasses\BookNamePropertyComparer.cs" />
     <Compile Include="BookContainer\PropertyComparerClasses\FactoryBookPropertyComparer.cs" />
-    <Compile Include="Shared\Box.cs" />
-    <Compile Include="Shared\BoxComponent.cs" />
+    <Compile Include="Shared\Menu.cs" />
+    <Compile Include="Shared\MenuComponent.cs" />
     <Compile Include="Shared\IViewer.cs" />
+    <Compile Include="Shared\MenuItem.cs" />
     <Compile Include="Shared\ObjectListFactory.cs" />
     <Compile Include="Shared\OrderDeciderClasses\IObjectOrderDecider.cs" />
     <Compile Include="Shared\ObjectListBase.cs" />

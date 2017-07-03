@@ -6,48 +6,47 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public class Box:BoxComponent
+    public class Menu:MenuComponent
     {
-        List<BoxComponent> ContainerComponents;
+        List<MenuComponent> ContainerComponents;
         public string Name { get; set; }
         public string Description { get; set; }
 
         private IViewer Viewer;
 
-        public Box(string name, string description,IViewer viewer)
+        public Menu(string name, string description,IViewer viewer)
         {
             this.Name = name;
             this.Description = description;
-            this.ContainerComponents = new List<BoxComponent>();
+            this.ContainerComponents = new List<MenuComponent>();
             this.Viewer = viewer;
         }
 
-        public override void Add(BoxComponent containerComponent)
+        public override void Add(MenuComponent containerComponent)
         {
             ContainerComponents.Add(containerComponent);
         }
 
-        public override void Remove(BoxComponent containerComponent)
+        public override void Remove(MenuComponent containerComponent)
         {
             ContainerComponents.Remove(containerComponent);
         }
 
-        public override BoxComponent GetChild(int i)
+        public override MenuComponent GetChild(int i)
         {
             return ContainerComponents.ElementAt(i);
         }
 
         public override void ShowInformation()
         {
-            this.Viewer.Show(this.Name);
-            this.Viewer.Show(this.Description);
+            this.Viewer.Show(this.Name + " " + this.Description);
             this.Viewer.Show("-----------------------------");
-
+            
             foreach (var item in ContainerComponents)
             {
                 item.ShowInformation();
             }
-            
+            this.Viewer.Show("");
         }
 
     }

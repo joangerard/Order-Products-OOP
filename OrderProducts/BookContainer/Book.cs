@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public class Book:BoxComponent
+    public class Book
     {
         public string Name { get; set; }
         public string Author { get; set; }
@@ -21,9 +21,5 @@ namespace Container
             this._viewer = viewer;
         }
 
-        public override void ShowInformation()
-        {
-            _viewer.Show(String.Format("{0} {1} {2}", this.Name, this.Author, this.Isbn));
-        }
     }
 }

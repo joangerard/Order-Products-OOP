@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,26 +6,22 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public class FactoryProductPropertyComparer : IFactoryObjectPropertyComparer<Product>
+    public class FactoryProductPropertyComparer : IPropertyComparerFactory<Product>
     {
-        public FactoryProductPropertyComparer()
+        public IComparer<Product> Create(string optionOrder, string optionType)
         {
-        }
-
-        public IObjectPropertyComparer<Product> Create(string option)
-        {
-            switch (option)
+            switch (optionType)
             {
                 case "1":
-                    return new ProductCodeComparer();
+                    return new ProductCodeComparer(optionOrder);
                 case "2":
-                    return new ProductNameComparer();
+                    return new ProductNameComparer(optionOrder);
                 case "3":
-                    return new ProductStockComparer();
+                    return new ProductStockComparer(optionOrder);
                 case "4":
-                    return new ProductExpirationDateComparer();
+                    return new ProductExpirationDateComparer(optionOrder);
                 default:
-                    return new ObjectNotDefinedPropertyComparer<Product>();
+                    return new ProductCodeComparer(optionOrder);
             }
         }
     }

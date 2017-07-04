@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public interface IFactoryObjectPropertyComparer<T>
+    public interface IPropertyComparerFactory<T>
     {
-        IObjectPropertyComparer<T> Create(string option);
+        IComparer<T> Create(string optionOrder, string optionType);
     }
 }

@@ -8,21 +8,24 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    class BookIsbnPropertyComparer:IObjectPropertyComparer<Book>
+    public class BookIsbnPropertyComparer:IComparer<Book>
     {
-        bool IObjectPropertyComparer<Book>.Equal(Book b1, Book b2)
+        string _order; //A or D
+
+        public BookIsbnPropertyComparer(string order)
         {
-            return String.Compare(b1.Isbn, b2.Isbn) == 0;
+            this._order = order;
         }
 
-        bool IObjectPropertyComparer<Book>.IsGreater(Book b1, Book b2)
+        public int Compare(Book x, Book y)
         {
-            return String.Compare(b1.Isbn, b2.Isbn) > 0;
-        }
-
-        bool IObjectPropertyComparer<Book>.IsLower(Book b1, Book b2)
-        {
-            return String.Compare(b1.Isbn, b2.Isbn) < 0;
+            int a;
+            a = String.Compare(x.Isbn, y.Isbn);
+            if (_order.Equals("D"))
+            {
+                a *= -1;
+            }
+            return a;
         }
     }
 }

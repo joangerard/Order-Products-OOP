@@ -8,19 +8,24 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    class ProductExpirationDateComparer:IObjectPropertyComparer<Product>
+    class ProductExpirationDateComparer : IComparer<Product>
     {
-        public bool Equal(Product p1, Product p2)
+       string _order; //A or D
+
+       public ProductExpirationDateComparer(string order)
         {
-            return DateTime.Compare(p1.ExpirationDate, p2.ExpirationDate) == 0;
+            this._order = order;
         }
-        public bool IsGreater(Product p1, Product p2)
+
+        public int Compare(Product x, Product y)
         {
-            return DateTime.Compare(p1.ExpirationDate, p2.ExpirationDate) > 0;
-        }
-        public bool IsLower(Product p1, Product p2)
-        {
-            return DateTime.Compare(p1.ExpirationDate, p2.ExpirationDate) < 0;
+            int a;
+            a = DateTime.Compare(x.ExpirationDate, y.ExpirationDate);
+            if (_order.Equals("D"))
+            {
+                a *= -1;
+            }
+            return a;
         }
     }
 }

@@ -1,33 +1,27 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Container;
 
 namespace Container
 {
-    public class FactoryBookPropertyComparer:IFactoryObjectPropertyComparer<Book>
+    public class FactoryBookPropertyComparer : IPropertyComparerFactory<Book>
     {
-        public FactoryBookPropertyComparer()
+        public IComparer<Book> Create(string optionOrder, string optionType)
         {
-        }
-
-        public IObjectPropertyComparer<Book> Create(string option)
-        {
-            switch (option)
+            switch (optionType)
             {
                 case "1":
-                    return new BookNamePropertyComparer();
+                    return new BookNamePropertyComparer(optionOrder);
                 case "2":
-                    return new BookAuthorPropertyComparer();
+                    return new BookAuthorPropertyComparer(optionOrder);
                 case "3":
-                    return new BookIsbnPropertyComparer();
+                    return new BookIsbnPropertyComparer(optionOrder);
                 default:
-                    return new ObjectNotDefinedPropertyComparer<Book>();
+                    return new BookNamePropertyComparer(optionOrder);
             }
         }
-
-
     }
 }

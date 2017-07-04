@@ -7,21 +7,26 @@ using System.Text;
 
 namespace Container
 {
-    class ProductStockComparer:IObjectPropertyComparer<Product>
+    class ProductStockComparer:IComparer<Product>
     {
-        public bool IsGreater(Product product1, Product product2)
+        string _order; //A or D
+
+        public ProductStockComparer(string order)
         {
-            return product1.Stock > product2.Stock;
+            this._order = order;
         }
 
-        public bool Equal(Product product1, Product product2)
+        public int Compare(Product x, Product y)
         {
-            return product1.Stock == product2.Stock;
-        }
+            int a = 0;
 
-        public bool IsLower(Product product1, Product product2)
-        {
-            return product1.Stock < product2.Stock;
+            a = x.Stock.CompareTo(y.Stock);
+
+            if (_order.Equals("D"))
+            {
+                a *= -1;
+            }
+            return a;
         }
     }
 }

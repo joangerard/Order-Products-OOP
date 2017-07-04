@@ -8,21 +8,22 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public class BookNamePropertyComparer:IObjectPropertyComparer<Book>
+    public class BookNamePropertyComparer : IComparer<Book>
     {
-        bool IObjectPropertyComparer<Book>.Equal(Book b1, Book b2)
+        string _order; //A or D
+
+        public BookNamePropertyComparer(string order)
         {
-            return String.Compare(b1.Name, b2.Name) == 0;
+            this._order = order;
         }
 
-        bool IObjectPropertyComparer<Book>.IsGreater(Book b1, Book b2)
+        public int Compare(Book x, Book y)
         {
-            return String.Compare(b1.Name, b2.Name) > 0;
-        }
-
-        bool IObjectPropertyComparer<Book>.IsLower(Book b1, Book b2)
-        {
-            return String.Compare(b1.Name, b2.Name) < 0;
+            int a;
+            a = String.Compare(x.Name, y.Name);
+            if (_order.Equals("D"))
+                a *= -1;
+            return a;
         }
 
     }

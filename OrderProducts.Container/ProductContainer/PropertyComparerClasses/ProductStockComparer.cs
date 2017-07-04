@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Container
 {
-    class ProductStockComparer:IComparer<Product>
+    public class ProductStockComparer:IComparer<Product>
     {
         string _order; //A or D
 

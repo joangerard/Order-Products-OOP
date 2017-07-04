@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookContainer\PropertyComparerClasses\FactoryBooksPropertyComparerTest.cs" />
+    <Compile Include="ProductContainer\PropertyComparerClasses\FactoryProductPropertyComparerTest.cs" />
+    <Compile Include="ProductContainer\PropertyComparerClasses\ProductCodeComparerTest.cs" />
+    <Compile Include="ProductContainer\PropertyComparerClasses\ProductNameComparerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\ObjectComparerTest.cs" />
     <Compile Include="StoreFacade.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,10 +60,7 @@
       <Name>OrderProducts.Container</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BookContainer\PropertyComparerClasses\" />
-    <Folder Include="Shared\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

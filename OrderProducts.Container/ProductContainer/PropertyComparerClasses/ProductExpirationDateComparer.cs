@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    class ProductExpirationDateComparer : IComparer<Product>
+    public class ProductExpirationDateComparer : IComparer<Product>
     {
        string _order; //A or D
 

@@ -1,11 +1,12 @@
 ﻿using Container;
+using OrderProducts.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrderProducts.Container
+namespace Container
 {
     public class StoreFacade
     {

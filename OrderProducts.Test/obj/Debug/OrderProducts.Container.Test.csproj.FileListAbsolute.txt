@@ -7,3 +7,5 @@ C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\obj\Debug\OrderProducts.Container.Test.csprojResolveAssemblyReference.cache
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\obj\Debug\OrderProducts.Test.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\obj\Debug\OrderProducts.Test.pdb
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\bin\Debug\OrderProducts.Model.dll
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\bin\Debug\OrderProducts.Model.pdb

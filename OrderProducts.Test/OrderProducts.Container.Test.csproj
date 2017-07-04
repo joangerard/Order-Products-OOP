@@ -59,6 +59,10 @@
       <Project>{637ad406-9bc2-4c73-80b1-ee68f9965d88}</Project>
       <Name>OrderProducts.Container</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OrderProducts.Model\OrderProducts.Model.csproj">
+      <Project>{0cb3ec90-27ec-47ad-849a-bba6f48d6cce}</Project>
+      <Name>OrderProducts.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

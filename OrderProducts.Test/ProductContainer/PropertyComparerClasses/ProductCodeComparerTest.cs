@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Container;
+using OrderProducts.Model;
 
 namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
 {

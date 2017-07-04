@@ -39,13 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookContainer\Book.cs" />
     <Compile Include="BookContainer\PropertyComparerClasses\BookAuthorPropertyComparer.cs" />
     <Compile Include="BookContainer\PropertyComparerClasses\BookIsbnPropertyComparer.cs" />
     <Compile Include="BookContainer\PropertyComparerClasses\BookNamePropertyComparer.cs" />
     <Compile Include="BookContainer\PropertyComparerClasses\FactoryBookPropertyComparer.cs" />
     <Compile Include="Shared\ObjectComparer.cs" />
-    <Compile Include="ProductContainer\Product.cs" />
     <Compile Include="ProductContainer\PropertyComparerClasses\ProductCodeComparer.cs" />
     <Compile Include="ProductContainer\PropertyComparerClasses\ProductExpirationDateComparer.cs" />
     <Compile Include="ProductContainer\PropertyComparerClasses\ProductNameComparer.cs" />
@@ -60,6 +58,12 @@
     <Compile Include="Shared\Interpreter.cs" />
     <Compile Include="Shared\Viewer\Viewer.cs" />
     <Compile Include="StoreFacade.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OrderProducts.Model\OrderProducts.Model.csproj">
+      <Project>{0cb3ec90-27ec-47ad-849a-bba6f48d6cce}</Project>
+      <Name>OrderProducts.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

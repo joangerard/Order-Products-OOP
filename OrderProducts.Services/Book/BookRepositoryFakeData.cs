@@ -8,30 +8,30 @@ using Container;
 
 namespace OrderProducts.Services
 {
-    public class BookRepositoryFakeData:IBookRepository
+    public class BookServiceFakeData:IBookService
     {
-        Interpreter<Book> _bookInterpreter;
-        IPropertyComparerFactory<Book> _bookPropertyComparerFactory;
+        Interpreter<BookModel> _bookInterpreter;
+        IPropertyComparerFactory<BookModel> _bookPropertyComparerFactory;
 
-        public BookRepositoryFakeData()
+        public BookServiceFakeData()
         {
             _bookPropertyComparerFactory = new FactoryBookPropertyComparer();
-            _bookInterpreter = new Interpreter<Book>(_bookPropertyComparerFactory,"1-A");
+            _bookInterpreter = new Interpreter<BookModel>(_bookPropertyComparerFactory,"1-A");
         }
 
-        public List<Model.Book> GetAll(string orderOptions)
+        public List<Model.BookModel> GetAll(string orderOptions)
         {
-            List<Book> books = new List<Book>();
-            Book b1 = new Book("Harry Potter 1", "JK Rowlings", "123456f");
-            Book b2 = new Book("Harry Potter 2", "JK Rowlings", "123456j");
-            Book b3 = new Book("Harry Potter 3", "JK Rowlings", "123456j");
+            List<BookModel> books = new List<BookModel>();
+            BookModel b1 = new BookModel("Harry Potter 1", "JK Rowlings", "123456f");
+            BookModel b2 = new BookModel("Harry Potter 2", "JK Rowlings", "123456j");
+            BookModel b3 = new BookModel("Harry Potter 3", "JK Rowlings", "123456j");
 
             books.Add(b1);
             books.Add(b2);
             books.Add(b3);
 
-            List<IComparer<Book>> propertyComparers = _bookInterpreter.Translate(orderOptions);
-            IComparer<Book> bookComparer = new ObjectComparer<Book>(propertyComparers);
+            List<IComparer<BookModel>> propertyComparers = _bookInterpreter.Translate(orderOptions);
+            IComparer<BookModel> bookComparer = new ObjectComparer<BookModel>(propertyComparers);
             books.Sort(bookComparer);
 
             return books;

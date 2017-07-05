@@ -12,29 +12,29 @@ namespace OrderProducts.Test.Shared
     [TestFixture]
     class ObjectComparerTest
     {
-        ObjectComparer<Product> _productComparer;
-        Product _p1;
-        Product _p2;
-        Product _p3;
-        List<Product> _products;
+        ObjectComparer<ProductModel> _productComparer;
+        ProductModel _p1;
+        ProductModel _p2;
+        ProductModel _p3;
+        List<ProductModel> _products;
 
         [SetUp]
         public void SetUp()
         {
-            _p1 = new Product("A123", "apple", 123, new DateTime());
-            _p2 = new Product("A123", "orange", 123, new DateTime());
-            _p3 = new Product("A123", "banana", 123, new DateTime());
-            IComparer<Product> codeComparer = new ProductCodeComparer("A");
-            IComparer<Product> nameComparer = new ProductNameComparer("D");
-            List<IComparer<Product>> comparers = new List<IComparer<Product>>();
-            _products = new List<Product>();
+            _p1 = new ProductModel("A123", "apple", 123, new DateTime());
+            _p2 = new ProductModel("A123", "orange", 123, new DateTime());
+            _p3 = new ProductModel("A123", "banana", 123, new DateTime());
+            IComparer<ProductModel> codeComparer = new ProductCodeComparer("A");
+            IComparer<ProductModel> nameComparer = new ProductNameComparer("D");
+            List<IComparer<ProductModel>> comparers = new List<IComparer<ProductModel>>();
+            _products = new List<ProductModel>();
             _products.Add(_p1);
             _products.Add(_p2);
             _products.Add(_p3);
             comparers.Add(codeComparer);
             comparers.Add(nameComparer);
 
-            _productComparer = new ObjectComparer<Product>(comparers);
+            _productComparer = new ObjectComparer<ProductModel>(comparers);
         }
 
         [Test]

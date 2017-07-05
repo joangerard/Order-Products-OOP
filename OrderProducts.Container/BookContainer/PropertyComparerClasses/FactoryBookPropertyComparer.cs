@@ -8,10 +8,10 @@ using OrderProducts.Model;
 
 namespace Container
 {
-    public class FactoryBookPropertyComparer : IPropertyComparerFactory<Book>
+    public class FactoryBookPropertyComparer : IPropertyComparerFactory<BookModel>
     {
         public FactoryBookPropertyComparer() { }
-        public IComparer<Book> Create(string optionOrder, string optionType)
+        public IComparer<BookModel> Create(string optionOrder, string optionType)
         {
             switch (optionType)
             {

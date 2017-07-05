@@ -40,9 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book\BookRepositoryFakeData.cs" />
-    <Compile Include="Book\IBookRepository.cs" />
-    <Compile Include="Product\IProductRepository.cs" />
-    <Compile Include="Product\ProductRepositoryFakeData.cs" />
+    <Compile Include="Book\IBookService.cs" />
+    <Compile Include="Mapper\IMapper.cs" />
+    <Compile Include="Mapper\ProductMapper.cs" />
+    <Compile Include="Product\IProductService.cs" />
+    <Compile Include="Product\ProductServiceFakeData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +55,10 @@
     <ProjectReference Include="..\OrderProducts.Model\OrderProducts.Model.csproj">
       <Project>{0cb3ec90-27ec-47ad-849a-bba6f48d6cce}</Project>
       <Name>OrderProducts.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrderProducts.Repository\OrderProducts.Repository.csproj">
+      <Project>{67345b7a-d2c3-4221-a36e-1f27a3f5904a}</Project>
+      <Name>OrderProducts.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

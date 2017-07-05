@@ -10,16 +10,16 @@ namespace OrderProducts.API.Controllers
 {
     public class ProductController : ApiController
     {
-        IProductRepository _productService;
+        IProductService _productService;
 
         public ProductController()
         {
-            this._productService = new ProductRepositoryFakeData();
+            this._productService = new ProductServiceFakeData();
         }
 
         [HttpGet]
         [ActionName("all")]
-        public List<Product> GetAllProducts(string options)
+        public List<ProductModel> GetAllProducts(string options)
         {
             return this._productService.GetAll(options);
         }

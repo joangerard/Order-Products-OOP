@@ -15,9 +15,9 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         [Test]
         public void Compare_by_name_should_return_zero_if_they_have_same_name()
         {
-            Product p1 = new Product("123", "apple", 123, new DateTime());
-            Product p2 = new Product("123", "apple", 123, new DateTime());
-            IComparer<Product> nameComparer = new ProductNameComparer("A");
+            ProductModel p1 = new ProductModel("123", "apple", 123, new DateTime());
+            ProductModel p2 = new ProductModel("123", "apple", 123, new DateTime());
+            IComparer<ProductModel> nameComparer = new ProductNameComparer("A");
             int result = nameComparer.Compare(p1, p2);
             Assert.AreEqual(result, 0);
         }
@@ -25,9 +25,9 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         [Test]
         public void Compare_by_name_descending_should_return_one_if_the_the_first_name_follows_the_second()
         {
-            Product p1 = new Product("A123", "apple", 123, new DateTime());
-            Product p2 = new Product("B123", "orange", 124, new DateTime());
-            IComparer<Product> nameComparer = new ProductNameComparer("D");
+            ProductModel p1 = new ProductModel("A123", "apple", 123, new DateTime());
+            ProductModel p2 = new ProductModel("B123", "orange", 124, new DateTime());
+            IComparer<ProductModel> nameComparer = new ProductNameComparer("D");
             int result = nameComparer.Compare(p1, p2);
             Assert.AreEqual(result, 1);
         }
@@ -35,9 +35,9 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         [Test]
         public void Compare_by_name_descending_should_return_minus_one_if_the_the_first_name_precedes_the_second()
         {
-            Product p1 = new Product("B123", "orange", 124, new DateTime());
-            Product p2 = new Product("A123", "apple", 123, new DateTime());
-            IComparer<Product> nameComparer = new ProductNameComparer("D");
+            ProductModel p1 = new ProductModel("B123", "orange", 124, new DateTime());
+            ProductModel p2 = new ProductModel("A123", "apple", 123, new DateTime());
+            IComparer<ProductModel> nameComparer = new ProductNameComparer("D");
             int result = nameComparer.Compare(p1, p2);
             Assert.AreEqual(result, -1);
         }
@@ -45,9 +45,9 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         [Test]
         public void Compare_by_name_ascending_should_return_one_if_the_the_second_name_follows_the_first()
         {
-            Product p1 = new Product("B123", "orange", 124, new DateTime());
-            Product p2 = new Product("A123", "apple", 123, new DateTime());
-            IComparer<Product> nameComparer = new ProductNameComparer("A");
+            ProductModel p1 = new ProductModel("B123", "orange", 124, new DateTime());
+            ProductModel p2 = new ProductModel("A123", "apple", 123, new DateTime());
+            IComparer<ProductModel> nameComparer = new ProductNameComparer("A");
             int result = nameComparer.Compare(p1, p2);
             Assert.AreEqual(result, 1);
         }
@@ -55,9 +55,9 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         [Test]
         public void Compare_by_name_ascending_should_return_minus_one_if_the_the_second_name_precedes_the_first()
         {
-            Product p1 = new Product("A123", "apple", 123, new DateTime());
-            Product p2 = new Product("B123", "orange", 124, new DateTime());
-            IComparer<Product> nameComparer = new ProductNameComparer("A");
+            ProductModel p1 = new ProductModel("A123", "apple", 123, new DateTime());
+            ProductModel p2 = new ProductModel("B123", "orange", 124, new DateTime());
+            IComparer<ProductModel> nameComparer = new ProductNameComparer("A");
             int result = nameComparer.Compare(p1, p2);
             Assert.AreEqual(result, -1);
         }

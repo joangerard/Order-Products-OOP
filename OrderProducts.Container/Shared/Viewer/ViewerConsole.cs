@@ -16,7 +16,7 @@ namespace Container
             Console.WriteLine(text);
         }
 
-        public void ShowProducts(IList<Product> products)
+        public void ShowProducts(IList<ProductModel> products)
         {
             Console.WriteLine("-------PRODUCTS---------------");
             foreach (var p in products)
@@ -25,7 +25,7 @@ namespace Container
             }
         }
 
-        public void ShowBooks(IList<Book> books)
+        public void ShowBooks(IList<BookModel> books)
         {
             Console.WriteLine("-------BOOKS---------------");
             foreach (var b in books)

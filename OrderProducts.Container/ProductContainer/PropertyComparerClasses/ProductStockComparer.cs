@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Container
 {
-    public class ProductStockComparer:IComparer<Product>
+    public class ProductStockComparer:IComparer<ProductModel>
     {
         string _order; //A or D
 
@@ -17,7 +17,7 @@ namespace Container
             this._order = order;
         }
 
-        public int Compare(Product x, Product y)
+        public int Compare(ProductModel x, ProductModel y)
         {
             int a = 0;
 

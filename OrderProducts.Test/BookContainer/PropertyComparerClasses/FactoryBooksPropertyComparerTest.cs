@@ -19,8 +19,8 @@ namespace OrderProducts.Test.BookContainer.PropertyComparerClasses
 
         public void Create_should_return_instance_of_the_correct_class(string optionOrder,string optionType,Type result)
         {
-            IPropertyComparerFactory<Book> factoryBookPropertyFactory = new FactoryBookPropertyComparer();
-            IComparer<Book> res = factoryBookPropertyFactory.Create(optionOrder, optionType);
+            IPropertyComparerFactory<BookModel> factoryBookPropertyFactory = new FactoryBookPropertyComparer();
+            IComparer<BookModel> res = factoryBookPropertyFactory.Create(optionOrder, optionType);
             Assert.AreEqual(result, res.GetType());
         }
     }

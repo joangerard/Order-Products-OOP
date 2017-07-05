@@ -10,16 +10,16 @@ namespace OrderProducts.API.Controllers
 {
     public class BookController : ApiController
     {
-        IBookRepository _bookRepo;
+        IBookService _bookRepo;
 
         public BookController()
         {
-            _bookRepo = new BookRepositoryFakeData();
+            _bookRepo = new BookServiceFakeData();
         }
 
         [HttpGet]
         [ActionName("all")]
-        public List<Book> GetAllBooks(string options)
+        public List<BookModel> GetAllBooks(string options)
         {
             return _bookRepo.GetAll(options);
         }

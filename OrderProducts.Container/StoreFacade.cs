@@ -11,26 +11,26 @@ namespace Container
     public class StoreFacade
     {
         IViewer viewer;
-        List<Product> products;
-        List<Book> books;
+        List<ProductModel> products;
+        List<BookModel> books;
 
-        IPropertyComparerFactory<Book> bookPropertyComparerFactory;
-        IPropertyComparerFactory<Product> productPropertyComparerFactory;
-        Interpreter<Product> interpreterProducts;
-        Interpreter<Book> interpreterBooks;
+        IPropertyComparerFactory<BookModel> bookPropertyComparerFactory;
+        IPropertyComparerFactory<ProductModel> productPropertyComparerFactory;
+        Interpreter<ProductModel> interpreterProducts;
+        Interpreter<BookModel> interpreterBooks;
         string optionsBooksOrProducts;
         string optionsParameters;
 
         public StoreFacade(IViewer viewer)
         {
             this.viewer = viewer;
-            this.products = new List<Product>();
-            this.books = new List<Book>();
+            this.products = new List<ProductModel>();
+            this.books = new List<BookModel>();
 
             this.bookPropertyComparerFactory = new FactoryBookPropertyComparer();
             this.productPropertyComparerFactory = new FactoryProductPropertyComparer();
-            this.interpreterBooks = new Interpreter<Book>(bookPropertyComparerFactory, "2-A");
-            this.interpreterProducts = new Interpreter<Product>(productPropertyComparerFactory, "1-A");
+            this.interpreterBooks = new Interpreter<BookModel>(bookPropertyComparerFactory, "2-A");
+            this.interpreterProducts = new Interpreter<ProductModel>(productPropertyComparerFactory, "1-A");
 
         }
 
@@ -46,10 +46,10 @@ namespace Container
 
         public void InitProducts()
         {
-            Product p1 = new Product("A122", "bread", 4, new DateTime(2017, 12, 12));
-            Product p2 = new Product("C123", "pencil", 3, new DateTime(2017, 12, 11));
-            Product p3 = new Product("D121", "bread", 4, new DateTime(2017, 12, 10));
-            Product p4 = new Product("C123", "pencil", 1, new DateTime(2017, 12, 14));
+            ProductModel p1 = new ProductModel("A122", "bread", 4, new DateTime(2017, 12, 12));
+            ProductModel p2 = new ProductModel("C123", "pencil", 3, new DateTime(2017, 12, 11));
+            ProductModel p3 = new ProductModel("D121", "bread", 4, new DateTime(2017, 12, 10));
+            ProductModel p4 = new ProductModel("C123", "pencil", 1, new DateTime(2017, 12, 14));
 
             products.Add(p1);
             products.Add(p2);
@@ -59,9 +59,9 @@ namespace Container
 
         public void InitBooks()
         {
-            Book b1 = new Book("Harry Potter 1", "JK Rowlings", "123456f");
-            Book b2 = new Book("Harry Potter 2", "JK Rowlings", "123456j");
-            Book b3 = new Book("Harry Potter 3", "JK Rowlings", "123456j");
+            BookModel b1 = new BookModel("Harry Potter 1", "JK Rowlings", "123456f");
+            BookModel b2 = new BookModel("Harry Potter 2", "JK Rowlings", "123456j");
+            BookModel b3 = new BookModel("Harry Potter 3", "JK Rowlings", "123456j");
 
             books.Add(b1);
             books.Add(b2);
@@ -111,14 +111,14 @@ namespace Container
             viewer.Show("RESULT: ");
             if (optionsBooksOrProducts.Equals("1"))
             {
-                List<IComparer<Book>> propertyComparers = interpreterBooks.Translate(optionsParameters);
-                IComparer<Book> bookComparer = new ObjectComparer<Book>(propertyComparers);
+                List<IComparer<BookModel>> propertyComparers = interpreterBooks.Translate(optionsParameters);
+                IComparer<BookModel> bookComparer = new ObjectComparer<BookModel>(propertyComparers);
                 books.Sort(bookComparer);
             }
             else if (optionsBooksOrProducts.Equals("2"))
             {
-                List<IComparer<Product>> propertyComparers = interpreterProducts.Translate(optionsParameters);
-                IComparer<Product> productComparer = new ObjectComparer<Product>(propertyComparers);
+                List<IComparer<ProductModel>> propertyComparers = interpreterProducts.Translate(optionsParameters);
+                IComparer<ProductModel> productComparer = new ObjectComparer<ProductModel>(propertyComparers);
                 products.Sort(productComparer);
             }
         }

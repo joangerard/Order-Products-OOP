@@ -1,7 +1,7 @@
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\bin\Debug\OrderProducts.Container.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\bin\Debug\OrderProducts.Container.pdb
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\obj\Debug\OrderProducts.Container.dll
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\obj\Debug\OrderProducts.Container.pdb
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\bin\Debug\OrderProducts.Model.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\bin\Debug\OrderProducts.Model.pdb
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\obj\Debug\OrderProducts.Container.csprojResolveAssemblyReference.cache
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\obj\Debug\OrderProducts.Container.dll
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Container\obj\Debug\OrderProducts.Container.pdb

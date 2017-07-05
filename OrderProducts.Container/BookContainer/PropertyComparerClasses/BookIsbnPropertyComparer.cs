@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public class BookIsbnPropertyComparer:IComparer<Book>
+    public class BookIsbnPropertyComparer:IComparer<BookModel>
     {
         string _order; //A or D
 
@@ -18,7 +18,7 @@ namespace Container
             this._order = order;
         }
 
-        public int Compare(Book x, Book y)
+        public int Compare(BookModel x, BookModel y)
         {
             int a;
             a = String.Compare(x.Isbn, y.Isbn);

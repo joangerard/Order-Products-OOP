@@ -14,12 +14,12 @@ namespace OrderProducts.Test.Viewer
             throw new NotImplementedException();
         }
 
-        public void ShowProducts(IList<Model.Product> products)
+        public void ShowProducts(IList<Model.ProductModel> products)
         {
             throw new NotImplementedException();
         }
 
-        public void ShowBooks(IList<Model.Book> books)
+        public void ShowBooks(IList<Model.BookModel> books)
         {
             throw new NotImplementedException();
         }

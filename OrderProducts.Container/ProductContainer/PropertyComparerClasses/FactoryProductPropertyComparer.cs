@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Container
 {
-    public class FactoryProductPropertyComparer : IPropertyComparerFactory<Product>
+    public class FactoryProductPropertyComparer : IPropertyComparerFactory<ProductModel>
     {
-        public IComparer<Product> Create(string optionOrder, string optionType)
+        public IComparer<ProductModel> Create(string optionOrder, string optionType)
         {
             switch (optionType)
             {

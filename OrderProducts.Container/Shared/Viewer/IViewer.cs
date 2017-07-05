@@ -10,7 +10,7 @@ namespace Container
     public interface IViewer
     {
         void Show(string text);
-        void ShowProducts(IList<Product> products);
-        void ShowBooks(IList<Book> books);
+        void ShowProducts(IList<ProductModel> products);
+        void ShowBooks(IList<BookModel> books);
     }
 }

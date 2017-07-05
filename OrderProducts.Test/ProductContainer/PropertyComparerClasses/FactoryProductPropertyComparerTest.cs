@@ -19,8 +19,8 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         [TestCase("A", "4", typeof(ProductExpirationDateComparer))]
         public void Create_should_return_instance_of_the_correct_class(string optionOrder, string optionType, Type result)
         {
-            IPropertyComparerFactory<Product> factoryProductPropertyFactory = new FactoryProductPropertyComparer();
-            IComparer<Product> res = factoryProductPropertyFactory.Create(optionOrder, optionType);
+            IPropertyComparerFactory<ProductModel> factoryProductPropertyFactory = new FactoryProductPropertyComparer();
+            IComparer<ProductModel> res = factoryProductPropertyFactory.Create(optionOrder, optionType);
             Assert.AreEqual(result, res.GetType());
         }
     }

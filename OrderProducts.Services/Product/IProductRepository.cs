@@ -9,6 +9,6 @@ namespace OrderProducts.Services
 {
     public interface IProductRepository
     {
-        List<Product> GetAll();
+        List<Product> GetAll(string orderOptions);
     }
 }

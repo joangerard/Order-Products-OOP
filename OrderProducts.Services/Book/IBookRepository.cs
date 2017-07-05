@@ -9,6 +9,6 @@ namespace OrderProducts.Services
 {
     public interface IBookRepository
     {
-        List<Book> GetAll();
+        List<Book> GetAll(string orderOptions);
     }
 }

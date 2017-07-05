@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace OrderProducts.API.Controllers
 {
@@ -18,9 +17,11 @@ namespace OrderProducts.API.Controllers
             this._productService = new ProductRepositoryFakeData();
         }
 
-        public List<Product> Get()
+        [HttpGet]
+        [ActionName("all")]
+        public List<Product> GetAllProducts(string options)
         {
-            return this._productService.GetAll();
+            return this._productService.GetAll(options);
         }
     }
 }

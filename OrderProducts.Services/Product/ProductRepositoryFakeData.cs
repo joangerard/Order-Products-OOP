@@ -1,4 +1,5 @@
-﻿using OrderProducts.Model;
+﻿using Container;
+using OrderProducts.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,16 @@ namespace OrderProducts.Services
 {
     public class ProductRepositoryFakeData:IProductRepository
     {
-        public List<Model.Product> GetAll()
+        IPropertyComparerFactory<Product> _productPropertyComparerFactory;
+        Interpreter<Product> _interpreterProducts;
+
+        public ProductRepositoryFakeData()
+        {
+            _productPropertyComparerFactory = new FactoryProductPropertyComparer();
+            _interpreterProducts = new Interpreter<Product>(_productPropertyComparerFactory,"1-A");
+        }
+
+        public List<Model.Product> GetAll(string orderOptions)
         {
             List<Product> products = new List<Product>();
 
@@ -22,6 +32,10 @@ namespace OrderProducts.Services
             products.Add(p2);
             products.Add(p3);
             products.Add(p4);
+
+            List<IComparer<Product>> propertyComparers = _interpreterProducts.Translate(orderOptions);
+            IComparer<Product> productComparer = new ObjectComparer<Product>(propertyComparers);
+            products.Sort(productComparer);
 
             return products;
         }

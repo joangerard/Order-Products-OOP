@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace OrderProducts.API.Controllers
 {
@@ -17,10 +16,12 @@ namespace OrderProducts.API.Controllers
         {
             _bookRepo = new BookRepositoryFakeData();
         }
-        // GET: Book
-        public List<Book> Get()
+
+        [HttpGet]
+        [ActionName("all")]
+        public List<Book> GetAllBooks(string options)
         {
-            return _bookRepo.GetAll();
+            return _bookRepo.GetAll(options);
         }
     }
 }

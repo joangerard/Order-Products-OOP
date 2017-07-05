@@ -10,6 +10,7 @@ namespace Container
 {
     public class FactoryBookPropertyComparer : IPropertyComparerFactory<Book>
     {
+        public FactoryBookPropertyComparer() { }
         public IComparer<Book> Create(string optionOrder, string optionType)
         {
             switch (optionType)

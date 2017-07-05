@@ -56,7 +56,7 @@
     <Compile Include="MenuComponents\MenuComponent.cs" />
     <Compile Include="MenuComponents\MenuItem.cs" />
     <Compile Include="Shared\Interpreter.cs" />
-    <Compile Include="Shared\Viewer\Viewer.cs" />
+    <Compile Include="Shared\Viewer\ViewerConsole.cs" />
     <Compile Include="StoreFacade.cs" />
   </ItemGroup>
   <ItemGroup>

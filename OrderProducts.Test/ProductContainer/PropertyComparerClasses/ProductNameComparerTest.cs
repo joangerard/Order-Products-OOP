@@ -26,7 +26,7 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         public void Compare_by_name_descending_should_return_one_if_the_the_first_name_follows_the_second()
         {
             Product p1 = new Product("A123", "apple", 123, new DateTime());
-            Product p2 = new Product("B123", "orange", 123, new DateTime());
+            Product p2 = new Product("B123", "orange", 124, new DateTime());
             IComparer<Product> nameComparer = new ProductNameComparer("D");
             int result = nameComparer.Compare(p1, p2);
             Assert.AreEqual(result, 1);
@@ -35,7 +35,7 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         [Test]
         public void Compare_by_name_descending_should_return_minus_one_if_the_the_first_name_precedes_the_second()
         {
-            Product p1 = new Product("B123", "orange", 123, new DateTime());
+            Product p1 = new Product("B123", "orange", 124, new DateTime());
             Product p2 = new Product("A123", "apple", 123, new DateTime());
             IComparer<Product> nameComparer = new ProductNameComparer("D");
             int result = nameComparer.Compare(p1, p2);
@@ -45,7 +45,7 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         [Test]
         public void Compare_by_name_ascending_should_return_one_if_the_the_second_name_follows_the_first()
         {
-            Product p1 = new Product("B123", "orange", 123, new DateTime());
+            Product p1 = new Product("B123", "orange", 124, new DateTime());
             Product p2 = new Product("A123", "apple", 123, new DateTime());
             IComparer<Product> nameComparer = new ProductNameComparer("A");
             int result = nameComparer.Compare(p1, p2);
@@ -56,7 +56,7 @@ namespace OrderProducts.Test.ProductContainer.PropertyComparerClasses
         public void Compare_by_name_ascending_should_return_minus_one_if_the_the_second_name_precedes_the_first()
         {
             Product p1 = new Product("A123", "apple", 123, new DateTime());
-            Product p2 = new Product("B123", "orange", 123, new DateTime());
+            Product p2 = new Product("B123", "orange", 124, new DateTime());
             IComparer<Product> nameComparer = new ProductNameComparer("A");
             int result = nameComparer.Compare(p1, p2);
             Assert.AreEqual(result, -1);

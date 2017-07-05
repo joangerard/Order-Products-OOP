@@ -9,3 +9,6 @@ C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\obj\Debug\OrderProducts.Test.pdb
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\bin\Debug\OrderProducts.Model.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\bin\Debug\OrderProducts.Model.pdb
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\bin\Debug\Castle.Core.dll
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\bin\Debug\Moq.dll
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Test\bin\Debug\Moq.xml

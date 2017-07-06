@@ -30,8 +30,7 @@ namespace OrderProducts.Services
             books.Add(b2);
             books.Add(b3);
 
-            List<IComparer<BookModel>> propertyComparers = _bookInterpreter.Translate(orderOptions);
-            IComparer<BookModel> bookComparer = new ObjectComparer<BookModel>(propertyComparers);
+            IComparer<BookModel> bookComparer = new ObjectComparer<BookModel>(orderOptions, _bookPropertyComparerFactory);
             books.Sort(bookComparer);
 
             return books;

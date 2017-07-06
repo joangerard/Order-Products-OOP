@@ -19,9 +19,11 @@ namespace OrderProducts.API.Controllers
 
         [HttpGet]
         [ActionName("all")]
-        public List<BookModel> GetAllBooks(string options)
+        public IHttpActionResult GetAllBooks(string options)
         {
-            return _bookRepo.GetAll(options);
+            if(String.IsNullOrEmpty(options)) 
+                return BadRequest("Parameter options cannot be null nor empty");
+            return Ok(_bookRepo.GetAll(options));
         }
     }
 }

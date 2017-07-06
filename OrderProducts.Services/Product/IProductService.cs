@@ -10,5 +10,7 @@ namespace OrderProducts.Services
     public interface IProductService
     {
         List<ProductModel> GetAll(string orderOptions);
+        int Create(ProductModel product);
+        ProductModel GetByCode(string code);
     }
 }

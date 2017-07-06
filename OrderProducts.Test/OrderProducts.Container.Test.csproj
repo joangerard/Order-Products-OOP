@@ -64,7 +64,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared\InterpreterTest.cs" />
     <Compile Include="Shared\ObjectComparerTest.cs" />
-    <Compile Include="StoreFacade.cs" />
     <Compile Include="Viewer\ViewerTest.cs" />
   </ItemGroup>
   <ItemGroup>

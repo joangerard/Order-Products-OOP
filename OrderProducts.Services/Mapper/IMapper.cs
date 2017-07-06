@@ -9,5 +9,6 @@ namespace OrderProducts.Services.Mapper
     public interface IMapper<T,F>
     {
         T Map(F o);
+        F Map(T o);
     }
 }

@@ -8,19 +8,28 @@ namespace Container
 {
     public class ObjectComparer<T> : IComparer<T>
     {
-        List<IComparer<T>> propertiesComparer;
+        List<IComparer<T>> _propertiesComparer;
+        Interpreter<T> _interpreterOptions;
+        IPropertyComparerFactory<T> _propertyComparerFactory;
 
-        public ObjectComparer(List<IComparer<T>> propertiesComparer)
+        public ObjectComparer(string orderOptions, IPropertyComparerFactory<T> propertyComparerFactory)
         {
-            this.propertiesComparer = propertiesComparer;
+            this._propertyComparerFactory = propertyComparerFactory;
+            this._interpreterOptions = new Interpreter<T>(_propertyComparerFactory, "1-A");
+            this._propertiesComparer = _interpreterOptions.Translate(orderOptions);
+        }
+
+        public void SetOrderOptions(string orderOptions)
+        {
+            this._propertiesComparer = _interpreterOptions.Translate(orderOptions);
         }
 
         public int Compare(T x, T y)
         {
-            return Comparer(x, y,propertiesComparer);
+            return Comparer(x, y,_propertiesComparer);
         }
 
-        private int Comparer<T>(T o1, T o2, List<IComparer<T>> propertyComparers)
+        private int Comparer(T o1, T o2, List<IComparer<T>> propertyComparers)
         {
             int i;
             int response = 0;

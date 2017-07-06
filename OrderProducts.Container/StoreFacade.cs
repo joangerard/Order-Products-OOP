@@ -16,8 +16,6 @@ namespace Container
 
         IPropertyComparerFactory<BookModel> bookPropertyComparerFactory;
         IPropertyComparerFactory<ProductModel> productPropertyComparerFactory;
-        Interpreter<ProductModel> interpreterProducts;
-        Interpreter<BookModel> interpreterBooks;
         string optionsBooksOrProducts;
         string optionsParameters;
 
@@ -29,8 +27,6 @@ namespace Container
 
             this.bookPropertyComparerFactory = new FactoryBookPropertyComparer();
             this.productPropertyComparerFactory = new FactoryProductPropertyComparer();
-            this.interpreterBooks = new Interpreter<BookModel>(bookPropertyComparerFactory, "2-A");
-            this.interpreterProducts = new Interpreter<ProductModel>(productPropertyComparerFactory, "1-A");
 
         }
 
@@ -111,14 +107,12 @@ namespace Container
             viewer.Show("RESULT: ");
             if (optionsBooksOrProducts.Equals("1"))
             {
-                List<IComparer<BookModel>> propertyComparers = interpreterBooks.Translate(optionsParameters);
-                IComparer<BookModel> bookComparer = new ObjectComparer<BookModel>(propertyComparers);
+                IComparer<BookModel> bookComparer = new ObjectComparer<BookModel>(optionsParameters,bookPropertyComparerFactory);
                 books.Sort(bookComparer);
             }
             else if (optionsBooksOrProducts.Equals("2"))
             {
-                List<IComparer<ProductModel>> propertyComparers = interpreterProducts.Translate(optionsParameters);
-                IComparer<ProductModel> productComparer = new ObjectComparer<ProductModel>(propertyComparers);
+                IComparer<ProductModel> productComparer = new ObjectComparer<ProductModel>(optionsParameters,productPropertyComparerFactory);
                 products.Sort(productComparer);
             }
         }

@@ -1,5 +1,6 @@
 ﻿using OrderProducts.Model;
 using OrderProducts.Services;
+using OrderProducts.Services.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +15,36 @@ namespace OrderProducts.API.Controllers
 
         public ProductController()
         {
-            this._productService = new ProductServiceFakeData();
+            this._productService = new ProductServiceEF();
         }
 
         [HttpGet]
         [ActionName("all")]
-        public List<ProductModel> GetAllProducts(string options)
+        public IHttpActionResult GetAllProducts(string options)
         {
-            return this._productService.GetAll(options);
+            if (String.IsNullOrEmpty(options)) 
+                return BadRequest("Parameter options cannot be null nor empty");
+            return Ok(this._productService.GetAll(options));
         }
+
+        [HttpGet]
+        [ActionName("get")]
+        public IHttpActionResult GetProductByCode(string code)
+        {
+            ProductModel model = this._productService.GetByCode(code);
+            if (model == null) return NotFound();
+            return Ok(model);
+        }
+
+        [HttpPost]
+        [ActionName("new")]
+        public IHttpActionResult CreateProduct(ProductModel product)
+        {
+            if (this._productService.GetByCode(product.Code) == null)
+                return BadRequest("Code already exists");
+            return Ok(this._productService.Create(product));
+        }
+
+        
     }
 }

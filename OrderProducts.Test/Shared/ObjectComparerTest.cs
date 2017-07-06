@@ -17,24 +17,21 @@ namespace OrderProducts.Test.Shared
         ProductModel _p2;
         ProductModel _p3;
         List<ProductModel> _products;
+        IPropertyComparerFactory<ProductModel> _productPropertyComparerFactory;
 
         [SetUp]
         public void SetUp()
         {
+            _productPropertyComparerFactory = new FactoryProductPropertyComparer();
             _p1 = new ProductModel("A123", "apple", 123, new DateTime());
             _p2 = new ProductModel("A123", "orange", 123, new DateTime());
             _p3 = new ProductModel("A123", "banana", 123, new DateTime());
-            IComparer<ProductModel> codeComparer = new ProductCodeComparer("A");
-            IComparer<ProductModel> nameComparer = new ProductNameComparer("D");
-            List<IComparer<ProductModel>> comparers = new List<IComparer<ProductModel>>();
             _products = new List<ProductModel>();
             _products.Add(_p1);
             _products.Add(_p2);
             _products.Add(_p3);
-            comparers.Add(codeComparer);
-            comparers.Add(nameComparer);
 
-            _productComparer = new ObjectComparer<ProductModel>(comparers);
+            _productComparer = new ObjectComparer<ProductModel>("1-A,2-D",_productPropertyComparerFactory);
         }
 
         [Test]

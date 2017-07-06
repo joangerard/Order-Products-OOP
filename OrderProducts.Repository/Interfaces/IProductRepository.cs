@@ -11,5 +11,6 @@ namespace OrderProducts.Repository.Interfaces
     {
         int Add(T product);
         List<ProductEntity> GetAll();
+        ProductEntity GetByCode(string code);
     }
 }

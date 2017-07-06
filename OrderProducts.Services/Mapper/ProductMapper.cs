@@ -23,5 +23,16 @@ namespace OrderProducts.Services.Mapper
                 productEntity.Stock,
                 productEntity.ExpirationDate);
         }
+
+        public ProductEntity Map(ProductModel productModel)
+        {
+            return new ProductEntity
+            {
+                Code = productModel.Code,
+                Name = productModel.Name,
+                Stock = productModel.Stock,
+                ExpirationDate = productModel.ExpirationDate
+            };
+        }
     }
 }

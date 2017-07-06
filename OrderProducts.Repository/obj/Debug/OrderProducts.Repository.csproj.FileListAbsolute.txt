@@ -1,4 +1,3 @@
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Repository\obj\Debug\OrderProducts.Repository.csprojResolveAssemblyReference.cache
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Repository\bin\Debug\OrderProducts.Repository.dll.config
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Repository\bin\Debug\OrderProducts.Repository.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.Repository\bin\Debug\OrderProducts.Repository.pdb

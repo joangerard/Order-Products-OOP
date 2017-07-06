@@ -44,6 +44,7 @@
     <Compile Include="Mapper\IMapper.cs" />
     <Compile Include="Mapper\ProductMapper.cs" />
     <Compile Include="Product\IProductService.cs" />
+    <Compile Include="Product\ProductServiceEF.cs" />
     <Compile Include="Product\ProductServiceFakeData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

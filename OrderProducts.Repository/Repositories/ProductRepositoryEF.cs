@@ -22,9 +22,24 @@ namespace OrderProducts.Repository.Repositories
             using (var dbContext = new StoreContext())
             {
                 dbContext.Products.Add(product);
-                i = dbContext.SaveChanges();
+                dbContext.SaveChanges();
+                i = product.ProductId;
             }
+
             return i;
+        }
+
+        public ProductEntity GetByCode(string code)
+        {
+            ProductEntity productEntity = null;
+            using (var dbContext = new StoreContext())
+            {
+                var product = from p in dbContext.Products
+                              where p.Code == code
+                              select p;
+                productEntity = (ProductEntity)product.FirstOrDefault();
+            }
+            return productEntity;
         }
 
 

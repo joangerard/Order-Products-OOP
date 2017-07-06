@@ -1,9 +1,5 @@
 ﻿using Container;
 using OrderProducts.Model;
-using OrderProducts.Repository.Entities;
-using OrderProducts.Repository.Interfaces;
-using OrderProducts.Repository.Repositories;
-using OrderProducts.Services.Mapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,29 +11,49 @@ namespace OrderProducts.Services
     public class ProductServiceFakeData:IProductService
     {
         IPropertyComparerFactory<ProductModel> _productPropertyComparerFactory;
-        Interpreter<ProductModel> _interpreterProducts;
-        IProductRepository<ProductEntity> _productRepo;
-        IMapper<ProductModel, ProductEntity> _productMapper;
+        List<ProductModel> _products;
 
         public ProductServiceFakeData()
         {
             _productPropertyComparerFactory = new FactoryProductPropertyComparer();
-            _interpreterProducts = new Interpreter<ProductModel>(_productPropertyComparerFactory,"1-A");
-            _productRepo = new ProductRepositoryEF();
-            _productMapper = new ProductMapper();
+            _products = new List<ProductModel>();
+            InitProducts();
+        }
+
+        private void InitProducts()
+        {
+            ProductModel p1 = new ProductModel("A122", "bread", 4, new DateTime(2017, 12, 12));
+            ProductModel p2 = new ProductModel("C123", "pencil", 3, new DateTime(2017, 12, 11));
+            ProductModel p3 = new ProductModel("D121", "bread", 4, new DateTime(2017, 12, 10));
+            ProductModel p4 = new ProductModel("C123", "pencil", 1, new DateTime(2017, 12, 14));
+
+            _products.Add(p1);
+            _products.Add(p2);
+            _products.Add(p3);
+            _products.Add(p4);
         }
 
         public List<Model.ProductModel> GetAll(string orderOptions)
         {
-            List<ProductModel> products = new List<ProductModel>();
+            IComparer<ProductModel> productComparer = new ObjectComparer<ProductModel>(orderOptions, _productPropertyComparerFactory);
+            _products.Sort(productComparer);
+            return _products;
+        }
 
-            _productRepo.GetAll().ForEach(p => products.Add(_productMapper.Map(p)));
 
-            List<IComparer<ProductModel>> propertyComparers = _interpreterProducts.Translate(orderOptions);
-            IComparer<ProductModel> productComparer = new ObjectComparer<ProductModel>(propertyComparers);
-            products.Sort(productComparer);
+        public int Create(ProductModel product)
+        {
+            _products.Add(product);
+            return _products.Count();
+        }
 
-            return products;
+
+        public ProductModel GetByCode(string code)
+        {
+            var product = from p in _products
+                          where p.Code == code
+                          select p;
+            return (ProductModel)product;
         }
     }
 }

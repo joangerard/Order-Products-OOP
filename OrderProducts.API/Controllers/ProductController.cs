@@ -40,7 +40,7 @@ namespace OrderProducts.API.Controllers
         [ActionName("new")]
         public IHttpActionResult CreateProduct(ProductModel product)
         {
-            if (this._productService.GetByCode(product.Code) == null)
+            if (this._productService.GetByCode(product.Code) != null)
                 return BadRequest("Code already exists");
             return Ok(this._productService.Create(product));
         }

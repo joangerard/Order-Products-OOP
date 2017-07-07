@@ -19,6 +19,8 @@ namespace OrderProducts.Repository.Config
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProductEntity>().ToTable("Product");
+            modelBuilder.Entity<BookEntity>().ToTable("Book");
+            modelBuilder.Entity<StoreEntity>().ToTable("Store");
         }
     }
 }

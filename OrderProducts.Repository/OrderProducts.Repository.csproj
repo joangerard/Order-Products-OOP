@@ -49,14 +49,75 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\StoreContext.cs" />
+    <Compile Include="Entities\BookEntity.cs" />
     <Compile Include="Entities\ProductEntity.cs" />
+    <Compile Include="Entities\StoreEntity.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="Migrations\201707052354301_InitialCreate.cs" />
+    <Compile Include="Migrations\201707052354301_InitialCreate.Designer.cs">
+      <DependentUpon>201707052354301_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707070016267_AddBookClass.cs" />
+    <Compile Include="Migrations\201707070016267_AddBookClass.Designer.cs">
+      <DependentUpon>201707070016267_AddBookClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707070041082_AddProductAbstract.cs" />
+    <Compile Include="Migrations\201707070041082_AddProductAbstract.Designer.cs">
+      <DependentUpon>201707070041082_AddProductAbstract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707071523313_AddDataToProducts.cs" />
+    <Compile Include="Migrations\201707071523313_AddDataToProducts.Designer.cs">
+      <DependentUpon>201707071523313_AddDataToProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707071543422_AddDataToBookTable.cs" />
+    <Compile Include="Migrations\201707071543422_AddDataToBookTable.Designer.cs">
+      <DependentUpon>201707071543422_AddDataToBookTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707071624361_AddStoreClassAndDependencies.cs" />
+    <Compile Include="Migrations\201707071624361_AddStoreClassAndDependencies.Designer.cs">
+      <DependentUpon>201707071624361_AddStoreClassAndDependencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707071627438_AddDataToStoreTable.cs" />
+    <Compile Include="Migrations\201707071627438_AddDataToStoreTable.Designer.cs">
+      <DependentUpon>201707071627438_AddDataToStoreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707071648351_AddBookIsbnProductCodeAsIndexUnique.cs" />
+    <Compile Include="Migrations\201707071648351_AddBookIsbnProductCodeAsIndexUnique.Designer.cs">
+      <DependentUpon>201707071648351_AddBookIsbnProductCodeAsIndexUnique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ProductRepositoryEF.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707052354301_InitialCreate.resx">
+      <DependentUpon>201707052354301_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707070016267_AddBookClass.resx">
+      <DependentUpon>201707070016267_AddBookClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707070041082_AddProductAbstract.resx">
+      <DependentUpon>201707070041082_AddProductAbstract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707071523313_AddDataToProducts.resx">
+      <DependentUpon>201707071523313_AddDataToProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707071543422_AddDataToBookTable.resx">
+      <DependentUpon>201707071543422_AddDataToBookTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707071624361_AddStoreClassAndDependencies.resx">
+      <DependentUpon>201707071624361_AddStoreClassAndDependencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707071627438_AddDataToStoreTable.resx">
+      <DependentUpon>201707071627438_AddDataToStoreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707071648351_AddBookIsbnProductCodeAsIndexUnique.resx">
+      <DependentUpon>201707071648351_AddBookIsbnProductCodeAsIndexUnique.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

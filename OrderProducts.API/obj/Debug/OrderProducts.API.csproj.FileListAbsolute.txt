@@ -3,7 +3,6 @@ C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.API.pdb
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Antlr3.Runtime.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\EntityFramework.dll
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\EntityFramework.SqlServer.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -49,7 +48,6 @@ C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\System.Web.WebPages.Razor.xml
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Antlr3.Runtime.pdb
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\EntityFramework.xml
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\EntityFramework.SqlServer.xml
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Microsoft.AspNet.Identity.EntityFramework.xml

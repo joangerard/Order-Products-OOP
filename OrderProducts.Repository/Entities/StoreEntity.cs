@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace OrderProducts.Repository.Entities
 {
+    [Table("Store")]
     public class StoreEntity
     {
         [Key]
@@ -17,7 +18,7 @@ namespace OrderProducts.Repository.Entities
         [MaxLength(100,ErrorMessage = "Store Name must be 100 characters or less")]
         public string Name { get; set; }
         public string Address { get; set; }
-        public ICollection<BookEntity> Books { get; set; }
+        public ICollection<PapersEntity> Books { get; set; }
         public ICollection<ProductEntity> Products { get; set; }
     }
 }

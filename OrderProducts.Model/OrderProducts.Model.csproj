@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookModel.cs" />
+    <Compile Include="MagazineModel.cs" />
+    <Compile Include="NewspaperModel.cs" />
+    <Compile Include="PaperType.cs" />
     <Compile Include="ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

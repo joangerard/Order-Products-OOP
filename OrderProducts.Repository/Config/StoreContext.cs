@@ -11,6 +11,8 @@ namespace OrderProducts.Repository.Config
     class StoreContext : DbContext
     {
         public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<PapersEntity> Papers { get; set; }
+        public DbSet<StoreEntity> Stores { get; set; }
 
         public StoreContext()
             :base("StoreDatabase")
@@ -19,7 +21,7 @@ namespace OrderProducts.Repository.Config
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProductEntity>().ToTable("Product");
-            modelBuilder.Entity<BookEntity>().ToTable("Book");
+            modelBuilder.Entity<PapersEntity>().ToTable("Papers");
             modelBuilder.Entity<StoreEntity>().ToTable("Store");
         }
     }

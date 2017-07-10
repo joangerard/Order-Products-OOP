@@ -1,3 +1,4 @@
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\obj\Debug\OrderProducts.API.csprojResolveAssemblyReference.cache
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.API.dll.config
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.API.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.API.pdb
@@ -32,6 +33,7 @@ C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\System.Web.WebPages.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\System.Web.WebPages.Razor.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\WebGrease.dll
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.Repository.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.Container.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.Model.pdb
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.Services.pdb
@@ -61,9 +63,7 @@ C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\System.Web.Http.Owin.xml
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.Repository.pdb
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.Container.pdb
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\obj\Debug\OrderProducts.API.csprojResolveAssemblyReference.cache
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\obj\Debug\OrderProducts.API.dll
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\obj\Debug\OrderProducts.API.pdb
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.Repository.dll
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts.API\bin\OrderProducts.Repository.pdb

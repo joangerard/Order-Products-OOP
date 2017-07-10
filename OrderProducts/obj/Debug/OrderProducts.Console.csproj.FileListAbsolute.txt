@@ -1,4 +1,3 @@
-C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\obj\Debug\OrderProducts.Console.csprojResolveAssemblyReference.cache
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\OrderProducts.exe.config
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\OrderProducts.exe
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\OrderProducts.pdb
@@ -8,5 +7,6 @@ C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\OrderProducts.Container.pdb
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\nunit.framework.xml
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\bin\Debug\OrderProducts.Model.pdb
+C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\obj\Debug\OrderProducts.Console.csprojResolveAssemblyReference.cache
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\obj\Debug\OrderProducts.exe
 C:\Users\sebastian.gerard\Documents\Visual Studio 2013\Projects\OrderProductsOOP\OrderProducts\obj\Debug\OrderProducts.pdb

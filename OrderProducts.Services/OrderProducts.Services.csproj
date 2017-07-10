@@ -39,9 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book\BookRepositoryFakeData.cs" />
-    <Compile Include="Book\IBookService.cs" />
+    <Compile Include="Mapper\MapperList.cs" />
+    <Compile Include="Papers\BookServiceEF.cs" />
+    <Compile Include="Papers\MagazineServiceEF.cs" />
+    <Compile Include="Papers\NewspaperServiceEF.cs" />
+    <Compile Include="Papers\PapersServiceEF.cs" />
+    <Compile Include="Papers\IPapersService.cs" />
+    <Compile Include="Mapper\BookMapper.cs" />
     <Compile Include="Mapper\IMapper.cs" />
+    <Compile Include="Mapper\MagazineMapper.cs" />
+    <Compile Include="Mapper\NewspaperMapper.cs" />
     <Compile Include="Mapper\ProductMapper.cs" />
     <Compile Include="Product\IProductService.cs" />
     <Compile Include="Product\ProductServiceEF.cs" />

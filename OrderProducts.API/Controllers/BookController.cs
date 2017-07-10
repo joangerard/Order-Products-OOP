@@ -1,5 +1,6 @@
 ﻿using OrderProducts.Model;
 using OrderProducts.Services;
+using OrderProducts.Services.Papers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,11 @@ namespace OrderProducts.API.Controllers
 {
     public class BookController : ApiController
     {
-        IBookService _bookRepo;
+        IPapersService<BookModel> _bookRepo;
 
         public BookController()
         {
-            _bookRepo = new BookServiceFakeData();
+            _bookRepo = new BookServiceEF();
         }
 
         [HttpGet]

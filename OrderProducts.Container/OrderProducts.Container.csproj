@@ -43,6 +43,12 @@
     <Compile Include="BookContainer\PropertyComparerClasses\BookIsbnPropertyComparer.cs" />
     <Compile Include="BookContainer\PropertyComparerClasses\BookNamePropertyComparer.cs" />
     <Compile Include="BookContainer\PropertyComparerClasses\FactoryBookPropertyComparer.cs" />
+    <Compile Include="MagazineContainer\PropertyComparerClasses\FactoryMagazinePropertyComparer.cs" />
+    <Compile Include="MagazineContainer\PropertyComparerClasses\MagazineTypePropertyComparer.cs" />
+    <Compile Include="MagazineContainer\PropertyComparerClasses\MagazineTitlePropertyComparer.cs" />
+    <Compile Include="NewspaperContainer\PropertComparerClasses\FactoryNewspaperPropertyComparer.cs" />
+    <Compile Include="NewspaperContainer\PropertComparerClasses\NewspaperPublicationDatePropertyComparer.cs" />
+    <Compile Include="NewspaperContainer\PropertComparerClasses\NewspaperTitlePropertyComparer.cs" />
     <Compile Include="Shared\ObjectComparer.cs" />
     <Compile Include="ProductContainer\PropertyComparerClasses\ProductCodeComparer.cs" />
     <Compile Include="ProductContainer\PropertyComparerClasses\ProductExpirationDateComparer.cs" />
@@ -65,6 +71,7 @@
       <Name>OrderProducts.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

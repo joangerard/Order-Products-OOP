@@ -21,5 +21,6 @@ namespace OrderProducts.Repository.Entities
         public DateTime ExpirationDate { get; set; }
         public string Abstract { get; set; }
         public virtual StoreEntity Store { get; set; }
+        public ProductEntity() { }
     }
 }
